@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 50%;
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btns-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4285f4;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #357ae8;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step-active {
+  display: block;
+}
+
+.progressbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 30px;
+}
+
+.progress-step {
+  width: 30px;
+  height: 30px;
+  background-color: #d3d3d3;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.progress-step::before {
+  content: attr(data-title);
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+}
+
+.progress-step-active {
+  background-color: #4285f4;
+  color: #fff;
+}
